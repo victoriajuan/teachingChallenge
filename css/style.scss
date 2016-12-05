@@ -1,0 +1,29 @@
+//variables
+$primary-font: 'arial';
+$primary-color: #f2f2f2;
+
+//from another .scss file style sheet
+@import 'mixins';
+
+//using variables to edit the style, reuseable and more flexibility
+body {
+  font-family: $primary-font;
+  background: $primary-color;
+}
+
+//testing a colored box with Mixins
+#box{
+  background: purple;
+  @include border-radius(5px);
+  height: 100px;
+  width: 100px;
+}
+
+//nested SASS
+$margin-size: 2em;
+.container{
+  ul li{
+    padding: 10px;
+    margin-left: $margin-size;
+  }
+}
